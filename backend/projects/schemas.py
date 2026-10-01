@@ -12,7 +12,7 @@ class ProjectListSchema(Schema):
     status: str
     technologies: list[TechnologySchema]
 
-class ProjectDetailSchema(Schema):
+class ProjectDetailSchema(ProjectListSchema):
     description: str
     github_url: str
     live_url: str
