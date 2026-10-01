@@ -23,4 +23,5 @@ professional project, from UX/UI analysis all the way to deployment.
 
 ## Status
 
-- Work in progress - phase 1: backend
+- Phase 1 complete - Django Ninja API with PostgreSQL, tested.
+- Phase 2 in progress - React frontend.
