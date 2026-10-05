@@ -1,18 +1,14 @@
-import { useEffect } from 'react'
 import './index.css'
 import Hero from './components/Hero/Hero'
-import { getProjects} from "./api/projects";
-import ProjectList from './components/ProjectCarousel/ProjectCarousel'
 import ProjectCarousel from "./components/ProjectCarousel/ProjectCarousel";
+import Skills from "./components/Skills/Skills";
 
 function App() {
-    useEffect(() => {
-        getProjects().then(console.log).catch(console.error)
-    }, [])
   return (
       <main>
         <Hero />
         <ProjectCarousel />
+        <Skills />
       </main>
   )
 }
