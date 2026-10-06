@@ -9,9 +9,9 @@ function Hero() {
                 </span>
 
                 <div className="hero-links">
-                    <a href="#projects">Projects</a>
+                    <a href="#projects">Projets</a>
                     <a href="#skills">Compétences</a>
-                    <a href="#about">A propos</a>
+                    <a href="#about">À propos</a>
                     <a href="#contact">Contact</a>
                 </div>
             </nav>
