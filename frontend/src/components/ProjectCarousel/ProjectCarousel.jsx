@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import useEmblaCarousel from "embla-carousel-react";
+import useEmblaCarousel from 'embla-carousel-react'
 import {getProjects} from '../../api/projects'
 import './ProjectCarousel.css'
 
@@ -47,7 +47,7 @@ function ProjectCarousel() {
 
     return (
         <section id="projects" className="projects">
-            <h2>Projects</h2>
+            <h2>Projets</h2>
 
             {loading && <p className="projects-message">Chargement...</p>}
             {error && (
@@ -76,7 +76,7 @@ function ProjectCarousel() {
                                                 <li key={tech.name}>{tech.name}</li>
                                             ))}
                                         </ul>
-                                        <span className="project-card-link">Voir le projet</span>
+                                        <span className="project-card-link">Voir le projet &rarr;</span>
                                     </article>
                                 </div>
                             ))}
@@ -89,6 +89,7 @@ function ProjectCarousel() {
                             onClick={() => emblaApi?.scrollPrev()}
                             aria-label="Projet précédent"
                         >
+                            &lsaquo;
                         </button>
                         <div className="carousel-dots">
                             {Array.from({length: snapCount}).map((_, index) => (
@@ -105,6 +106,7 @@ function ProjectCarousel() {
                             onClick={() => emblaApi?.scrollNext()}
                             aria-label="Projet suivant"
                         >
+                            &rsaquo;
                         </button>
                     </div>
                 </>

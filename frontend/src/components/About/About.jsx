@@ -3,7 +3,7 @@ import './About.css'
 function About() {
     return (
     <section id="about" className="about">
-        <h2>A propos</h2>
+        <h2>À propos</h2>
 
         <div className="about-layout">
             <div className="about-photo" aria-label="Emplacement de la photo">
