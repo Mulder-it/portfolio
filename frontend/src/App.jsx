@@ -2,6 +2,7 @@ import './index.css'
 import Hero from './components/Hero/Hero'
 import ProjectCarousel from "./components/ProjectCarousel/ProjectCarousel";
 import Skills from "./components/Skills/Skills";
+import About from "./components/About/About";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <Hero />
         <ProjectCarousel />
         <Skills />
+        <About />
       </main>
   )
 }
