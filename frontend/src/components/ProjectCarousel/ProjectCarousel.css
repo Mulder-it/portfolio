@@ -49,7 +49,7 @@
 }
 
 .project-card-status {
-    font-family: var(--font-mono);
+    font-family: var(--font-mono), monospace;
     font-size: 0.75rem;
     color: var(--color-accent);
 }
@@ -76,7 +76,7 @@
     padding: 0.25rem 0.75rem;
     background-color: var(--color-bg);
     border-radius: 999px;
-    font-family: var(--font-mono);
+    font-family: var(--font-mono), monospace;
     font-size: 0.75rem;
     color: var(--color-accent);
 }
