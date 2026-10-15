@@ -22,9 +22,9 @@
     margin: 0 auto;
 }
 
-.skills-goup h3 {
+.skills-group h3 {
     margin-bottom: 0.75rem;
-    font-family: var(--font-mono);
+    font-family: var(--font-mono), monospace;
     font-size: 0.9rem;
     font-weight: 500;
     color: var(--color-accent);
