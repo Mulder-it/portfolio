@@ -106,7 +106,7 @@ function Contact() {
             </form>
 
             <p className="contact-links">
-                Ou retrouve-moi sur{' '}
+                Ou retrouvez-moi sur{' '}
                 <a href="https://github.com/Mulder-it" target="_blank" rel="noreferrer">
                     GitHub
                 </a>
