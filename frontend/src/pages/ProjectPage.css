@@ -1,0 +1,53 @@
+.project-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.project-back {
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: var(--color-accent);
+}
+
+.project-message {
+    color: var(--color-text-muted);
+}
+
+.project-status {
+    font-family: var(--font-mono), monospace;
+    font-size: 0.8rem;
+    color: var(--color-accent);
+}
+
+.project-page h1 {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.project-summary {
+    margin-bottom: 1.25rem;
+    color: var(--color-text-muted);
+}
+
+.project-tags li {
+    padding: 0.25rem 0.75rem;
+    background-color: var(--color-surface);
+    border-radius: 999px;
+    font-family: var(--font-mono), monospace;
+    font-size: 0.75rem;
+    color: var(--color-accent);
+}
+
+.project-description {
+    margin-bottom: 2rem;
+    white-space: pre-line;
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.875rem;
+}

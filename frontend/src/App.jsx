@@ -1,19 +1,19 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 import './index.css'
-import Hero from './components/Hero/Hero'
-import ProjectCarousel from "./components/ProjectCarousel/ProjectCarousel";
-import Skills from "./components/Skills/Skills";
-import About from "./components/About/About";
-import Contact from "./components/Contact/Contact.jsx";
+import HomePage from './pages/HomePage'
+import ProjectPage from './pages/ProjectPage'
 
 function App() {
   return (
-      <main>
-        <Hero />
-        <ProjectCarousel />
-        <Skills />
-        <About />
-        <Contact />
-      </main>
+      <BrowserRouter>
+          <main>
+              <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/projets/:slug" element={<ProjectPage />} />
+                  <Route path="*" element={<p>Page introuvable.</p>} />
+              </Routes>
+          </main>
+      </BrowserRouter>
   )
 }
 export default App
