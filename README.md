@@ -87,7 +87,7 @@ pytest
 ## Status
 
 - Phase 1: complete     - backend (Django Ninja API, PostgreSQL, tests).
-- Phase 2: in progress  - React frontend (About text and photo still to be added).
+- Phase 2: complete     - React frontend.
 - Phase 3: planned      - Docker, then deployment
 
 The contact form still needs server-side rate limiting and Cloudflare Turnstile
