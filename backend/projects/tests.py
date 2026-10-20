@@ -67,4 +67,15 @@ class TestProjectsApi:
         response = client.get("/api/projects/does-not-exist")
         assert response.status_code == 404
 
+@pytest.mark.django_db
+class TestTechnologiesApi:
+    def test_list_returns_technologies(self, client, django_tech):
+        response =client.get("/api/technologies")
+        assert response.status_code == 200
+        names = [item["name"] for item in response.json()]
+        assert "Django" in names
 
+    def test_list_includes_technologies_unused_by_project(self, client):
+        Technology.objects.create(name="Docker", category=Technology.Category.TOOL)
+        response = client.get("/api/technologies")
+        assert [item["name"] for item in response.json()] == ["Docker"]
