@@ -1,4 +1,5 @@
 import './About.css'
+import photo from '../../assets/photo.jpg'
 
 function About() {
     return (
@@ -6,9 +7,7 @@ function About() {
         <h2>À propos</h2>
 
         <div className="about-layout">
-            <div className="about-photo" aria-label="Emplacement de la photo">
-                <span>photo</span>
-            </div>
+            <img className="about-photo" src={photo} alt="Portrait De Mulder Jérôme" />
 
             <div className="about-text">
                 <p>
