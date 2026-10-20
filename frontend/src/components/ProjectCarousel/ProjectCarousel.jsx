@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useCallback, useEffect, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import {getProjects} from '../../api/projects'
@@ -76,7 +77,9 @@ function ProjectCarousel() {
                                                 <li key={tech.name}>{tech.name}</li>
                                             ))}
                                         </ul>
-                                        <span className="project-card-link">Voir le projet &rarr;</span>
+                                        <Link className="project-card-link" to={`/projets/${project.slug}`}>
+                                            Voir le projet &rarr;
+                                        </Link>
                                     </article>
                                 </div>
                             ))}
