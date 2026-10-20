@@ -1,6 +1,11 @@
+import { useState } from "react";
 import './Hero.css'
 
 function Hero() {
+    const [menuOpen, setMenuOpen] = useState(false)
+
+    const closeMenu = () => setMenuOpen(false)
+
     return (
         <header className="hero">
             <nav className="hero-nav">
@@ -8,11 +13,32 @@ function Hero() {
                     JDM<span className="accent">.</span>
                 </span>
 
-                <div className="hero-links">
-                    <a href="#projects">Projets</a>
-                    <a href="#skills">Compétences</a>
-                    <a href="#about">À propos</a>
-                    <a href="#contact">Contact</a>
+                <button
+                    type="button"
+                    className="hero-menu-toggle"
+                    aria-expanded={menuOpen}
+                    aria-controls="hero-links"
+                    aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+                    onClick={() => setMenuOpen((open) => !open)}
+                >
+                    <span className="hero-menu-bar" />
+                    <span className="hero-menu-bar" />
+                    <span className="hero-menu-bar" />
+                </button>
+
+                <div id="hero-links" className={`hero-links ${menuOpen ? 'open' : ''}`}>
+                    <a href="#projects" onClick={closeMenu}>
+                        Projets
+                    </a>
+                    <a href="#skills" onClick={closeMenu}>
+                        Compétences
+                    </a>
+                    <a href="#about" onClick={closeMenu}>
+                        À propos
+                    </a>
+                    <a href="#contact" onClick={closeMenu}>
+                        Contact
+                    </a>
                 </div>
             </nav>
 
