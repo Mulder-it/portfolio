@@ -12,13 +12,16 @@ function About() {
 
             <div className="about-text">
                 <p>
-                    [Texte provisoire] Premier paragraphe : Parcours et formation
+                    Je me suis d'abord lancé dans la communication avant de me tourner vers l'informatique avec
+                    un bachelier en informatique et systèmes à la Haute École en Hainaut.
                 </p>
                 <p>
-                    [Texte provisoire] Deuxième paragraphe : Motivations
+                    Aujourd'hui, je pratique Python, Django, React et PostgreSQL en construisant ce site de A à Z.
+                    Vous pouvez y consulter mes projets.
                 </p>
                 <p>
-                    [Texte provisoire] Troisième paragraphe : Objectifs
+                    Je cherche actuellement un poste de développeur. Si mon profil correspond à vos besoins,
+                    écrivez-moi via le formulaire ci-dessous.
                 </p>
             </div>
         </div>
