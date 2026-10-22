@@ -83,12 +83,28 @@ pytest
 - Conventional Commits
 - Automated tests for the API (pytest)
 
+## Run with Docker
+
+1. Copy `.env.example` to `.env` and fill in the values.
+2. Start everything:
+
+```
+docker compose up --build
+```
+
+3. Create an admin account:
+
+```
+docker compose exec backend python manage.py createsuperuser
+```
+
+The site is served on http://localhost:8080 and the admin on http://localhost:8080/admin/.
 
 ## Status
 
 - Phase 1: complete     - backend (Django Ninja API, PostgreSQL, tests).
 - Phase 2: complete     - React frontend.
-- Phase 3: planned      - Docker, then deployment
+- Phase 3: complete     - Docker (Compose, PostgreSQL, Nginx)
 
 The contact form still needs server-side rate limiting and Cloudflare Turnstile
 before any public deployment.
