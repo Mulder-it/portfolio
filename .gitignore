@@ -223,3 +223,6 @@ __marimo__/
 
 # Node (frontend, for later)
 node_modules/
+
+# collectstatic
+staticfiles/
