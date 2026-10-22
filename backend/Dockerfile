@@ -10,7 +10,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN useradd --create-home appuser
+RUN useradd --create-home appuser \
+    && mkdir /app/staticfiles \
+    && chown appuser /app/staticfiles
 USER appuser
 
 EXPOSE 8000
