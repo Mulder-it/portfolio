@@ -18,6 +18,7 @@ class Technology(models.Model):
 
 class Project(models.Model):
     class Status(models.TextChoices):
+        PLANNED = "planned", "Planifié"
         IN_PROGRESS = "in_progress", "En cours"
         COMPLETED = "completed", "Terminé"
 

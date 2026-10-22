@@ -4,6 +4,7 @@ import { getProject } from "../api/projects"
 import './ProjectPage.css'
 
 const STATUS_LABELS = {
+    planned:'Planifié',
     in_progress: 'En cours',
     completed: 'Terminé',
 }

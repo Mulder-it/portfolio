@@ -8,7 +8,7 @@ export async function sendContactMessage(data){
     })
 
     if (response.status === 422){
-        throw new Error("Vérifie les champs du formulaire.")
+        throw new Error("Vérifiez les champs du formulaire.")
     }
 
     if (!response.ok){
