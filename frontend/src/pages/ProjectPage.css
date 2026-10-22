@@ -32,6 +32,15 @@
     color: var(--color-text-muted);
 }
 
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0 0 1.5rem;
+    padding: 0;
+    list-style: none;
+}
+
 .project-tags li {
     padding: 0.25rem 0.75rem;
     background-color: var(--color-surface);
