@@ -1,8 +1,8 @@
-import { useState } from 'react'
-import { sendContactMessage } from '../../api/contact'
+import {useState} from 'react'
+import {sendContactMessage} from '../../api/contact'
 import './Contact.css'
 
-const EMPTY_FORM = { name: '', email: '', message: '', website: '' }
+const EMPTY_FORM = {name: '', email: '', message: '', website: ''}
 
 function Contact() {
     const [form, setForm] = useState(EMPTY_FORM)
@@ -10,8 +10,8 @@ function Contact() {
     const [errorMessage, setErrorMessage] = useState('')
 
     const handleChange = (event) => {
-        const { name, value } = event.target
-        setForm((current) =>({ ...current, [name]: value }))
+        const {name, value} = event.target
+        setForm((current) => ({...current, [name]: value}))
     }
 
     const handleSubmit = async (event) => {
@@ -70,7 +70,7 @@ function Contact() {
                     />
                 </label>
 
-                {}
+                {/* Honeypot : hidden from humans, bots tend to fill it */}
                 <div className="contact-trap" aria-hidden="true">
                     <label>
                         Ne pas remplir
@@ -102,7 +102,7 @@ function Contact() {
                     <p className="contact-feedback contact-error" role="alert">
                         {errorMessage}
                     </p>
-                    )}
+                )}
             </form>
 
             <p className="contact-links">
