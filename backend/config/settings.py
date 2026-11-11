@@ -140,3 +140,8 @@ MAILERS = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
 ]
+
+# Nginx is the only proxy in front of Django
+
+NINJA_NUM_PROXIES = 1
+TURNSTILE_SECRET_KEY = os.environ.get('TURNSTILE_SECRET_KEY', "")

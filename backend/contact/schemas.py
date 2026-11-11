@@ -6,6 +6,7 @@ class ContactIn(Schema):
     email: EmailStr
     message: str = Field(min_length=10, max_length=5000)
     website: str = ""
+    turnstile_token: str = Field(min_length=1, max_length=2048)
 
 class ContactOut(Schema):
     detail: str
