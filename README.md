@@ -53,8 +53,8 @@ python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver
 ```
--API documentation : http://127.0.0.1:8000/api/docs
--Admin interface: http://127.0.0.1:8000/admin/
+- API documentation : http://127.0.0.1:8000/api/docs
+- Admin interface: http://127.0.0.1:8000/admin/
 
 ### Frontend
 
