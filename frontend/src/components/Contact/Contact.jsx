@@ -1,13 +1,17 @@
-import {useState} from 'react'
+import {useRef, useState} from 'react'
+import {Turnstile} from "@marsidev/react-turnstile"
 import {sendContactMessage} from '../../api/contact'
 import './Contact.css'
 
 const EMPTY_FORM = {name: '', email: '', message: '', website: ''}
+const TURNSTILE_SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY
 
 function Contact() {
     const [form, setForm] = useState(EMPTY_FORM)
     const [status, setStatus] = useState('idle')
     const [errorMessage, setErrorMessage] = useState('')
+    const [token, setToken] = useState('')
+    const turnstileRef = useRef(null)
 
     const handleChange = (event) => {
         const {name, value} = event.target
@@ -20,12 +24,15 @@ function Contact() {
         setErrorMessage('')
 
         try {
-            await sendContactMessage(form)
+            await sendContactMessage({...form, turnstile_token: token})
             setForm(EMPTY_FORM)
             setStatus('success')
         } catch (err) {
             setErrorMessage(err.message)
             setStatus('error')
+        } finally {
+            setToken('')
+            turnstileRef.current?.reset()
         }
     }
 
@@ -85,10 +92,18 @@ function Contact() {
                     </label>
                 </div>
 
+                <Turnstile
+                    ref={turnstileRef}
+                    siteKey={TURNSTILE_SITE_KEY}
+                    onSuccess={setToken}
+                    onExpire={() => setToken('')}
+                    onError={() => setToken('')}
+                />
+
                 <button
                     type="submit"
                     className="btn btn-primary"
-                    disabled={status === 'sending'}
+                    disabled={status === 'sending' || !token}
                 >
                     {status === 'sending' ? 'Envoi...' : 'Envoyer'}
                 </button>

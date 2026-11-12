@@ -15,6 +15,10 @@ export async function sendContactMessage(data){
         throw new Error("Trop de messages envoyés. Veuillez réessayer plus tard.")
     }
 
+    if (response.status === 400){
+        throw new Error("La vérification anti-spam a échoué. Veuillez réessayer")
+    }
+
     if (!response.ok){
         throw new Error(`Erreur ${response.status}`)
     }
