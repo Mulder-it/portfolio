@@ -72,7 +72,7 @@ function ProjectCarousel() {
                                             {STATUS_LABELS[project.status] ?? project.status}
                                         </span>
                                         <h3>{project.title}</h3>
-                                        <p className="project-card-sumary">{project.summary}</p>
+                                        <p className="project-card-summary">{project.summary}</p>
                                         <ul className="project-card-tags">
                                             {project.technologies.map((tech) => (
                                                 <li key={tech.name}>{tech.name}</li>
